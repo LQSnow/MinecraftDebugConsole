@@ -1,4 +1,4 @@
-# MinecraftDebugConsole
+# MinecraftDebugConsole For Intellij IDEA
 
 <!-- Plugin description -->
 
