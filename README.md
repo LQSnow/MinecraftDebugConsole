@@ -2,7 +2,7 @@
 
 <!-- Plugin description -->
 
-It is for easy debugging Minecraft Plugin.
+It allows you to quickly open the server and debug plugins within the IDE, and can apply the modified plugins to the server with just one click without the need for a reboot.
 
 This project is adapted from "https://github.com/syuchan1005/MCPluginDebuggerforIDEA". I fixed its bugs and optimized its functionality.
 <!-- Plugin description end -->
@@ -22,6 +22,6 @@ Download the [latest release](https://github.com/LQSnow/MinecraftDebugConsole/re
 6. Click `Start` to start the server.
 7. Click `Stop` to shut down the server.
 8. Click `Reload` to reload (not recommended, may cause bugs, recommended to use Reboot instead)
-9. Click `Reboot` to restart the server.
+9. Click `Reboot` to reboot the server.
 10. Click `ForceStop` to forcibly kill the process. If the process is stuck and cannot be shut down properly, click this button to proceed.
 11. If you want to reload the plugin without restarting the server, please install the PlugManX plugin. When you modify your plugin, first compile it, then click `ReloadPlugin (Need PlugManX)`, and your updated plugin will immediately take effect on the server.
