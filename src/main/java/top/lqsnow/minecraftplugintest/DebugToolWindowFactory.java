@@ -110,10 +110,16 @@ public class DebugToolWindowFactory implements ToolWindowFactory {
                         // Wait for 1 second
                         Thread.sleep(2000);
 
-                        // Move plugin.jar to plugins folder
+                        // Move plugin.jar to the plugins folder
                         File pluginJar = config.getPluginJarFile();
                         File serverDir = config.getServerJarFile().getParentFile();
                         File pluginsDir = new File(serverDir, "plugins");
+
+                        // Create plugins folder if it doesn't exist
+                        if (!pluginsDir.exists()) {
+                            pluginsDir.mkdirs();
+                        }
+
                         File destination = new File(pluginsDir, pluginJar.getName());
 
                         // Delete existing plugin.jar if it exists
