@@ -132,6 +132,7 @@ public class DebugToolWindowFactory implements ToolWindowFactory {
 
                         // Send "plugman load plugin" command
                         processManager.writeCommand("plugman load " + config.getPluginName() + "\n");
+                        processManager.writeCommand("plugman enable " + config.getPluginName() + "\n");
                         reloadPluginButton.setEnabled(true);
                     } catch (Exception ex) {
                         ex.printStackTrace();
@@ -142,6 +143,7 @@ public class DebugToolWindowFactory implements ToolWindowFactory {
 
         // ServerButtons
         startButton.addActionListener((e) -> {
+            reloadPluginButton.setEnabled(true);
             try {
                 processManager.startServer();
             } catch (IOException e1) {
@@ -149,6 +151,7 @@ public class DebugToolWindowFactory implements ToolWindowFactory {
             }
         });
         stopButton.addActionListener((e) -> {
+            reloadPluginButton.setEnabled(true);
             try {
                 processManager.stopServer();
             } catch (InterruptedException | IOException e1) {
